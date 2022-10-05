@@ -7,16 +7,17 @@ imgs[4] = 'img/kanye4.png';
 imgs[5] = 'img/kanye5.png';
 imgs[0] = 'img/kanye6.png';
 
-window.onclick = function() {
-  const random = Math.floor(Math.random()* imgs.length);
-  document.querySelector('img').src = imgs[random];
-}
+// window.onclick = function() {
+//   const random = Math.floor(Math.random()* imgs.length);
+//   document.body.style.backgroundImage.src = imgs[random];
+// }
 
 
-document.querySelector('button').addEventListener('click', shuffleYe)
+document.querySelector('button').addEventListener('click', shuffleYe, changeImage)
 
 function shuffleYe(){
 const url = `https://api.kanye.rest`
+
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
@@ -27,4 +28,8 @@ const url = `https://api.kanye.rest`
       .catch(err => {
           console.log(`error ${err}`)
       });
+}
+function changeImage(){
+  const random = Math.floor(Math.random()* imgs.length);
+  document.body.style.backgroundImage = imgs[random];
 }
