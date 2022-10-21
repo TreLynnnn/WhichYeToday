@@ -1,0 +1,41 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url('../img/kanye.png');
+    background-size: cover;
+  }
+  
+  img, button, h1{
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    padding-bottom: .5rem;
+  }
+  button{
+    height: 50px;
+    width: 100px;
+    padding-bottom: 0;
+  }
+  h1, h2{
+    height: 50px;
+    text-align: center;
+  }
+  div {
+    padding-top: 8%;
+  }
+  /******************************************
+  /* ADDITIONAL STYLES
+  
+  /*******************************************/
+  
